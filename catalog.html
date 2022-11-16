@@ -57,21 +57,24 @@
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
-                      <label class="control-label">
+                      <label class="control">
                         <input class="control-input" type="checkbox" name="swimming-pool" value="Бассейн" checked>
-                          Бассейн
+                          <span class="contrpl-mark"></span>
+                          <span class="control-label">Бассейн</span>
                       </label>
                     </li>
                    <li class="catalog-filter-item">
-                      <label class="control-label">
+                      <label class="control">
                         <input class="control-input" type="checkbox" name="parking" value="Парковка" checked>
-                          Парковка
+                        <span class="contrpl-mark"></span>
+                        <span class="control-label">Парковка</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
-                      <label class="control-label">
+                      <label class="control">
                         <input class="control-input" type="checkbox" name="Wi-Fi" value="Wi-Fi">
-                          Wi-Fi
+                        <span class="contrpl-mark"></span>
+                        <span class="control-label">Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
@@ -99,14 +102,34 @@
                     </li>
                   </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                    <input type="text" name="min-price"><span class="visually-hidden">Минимальная цена</span>
-                    <input type="text" name="max-price"><span class="visually-hidden">Максимальная цена</span>
-                    <!-- Здесь будеть ползунок стоимости жилья-->
+
+                    <div class="range-wrapper-inputs">
+                      <label class="catalog-filter-label">
+                        <span class="label-wrapper">от</span> <input class="range-input input-min" type="text" value="0" name="min-price">
+                      </label>
+                      <label class="catalog-filter-label">
+                        <span class="label-wrapper">до</span> <input class="range-input input-max" type="text" value="9000" name="max-price">
+                      </label>
+                      </div>
+
+                    <div class="range">
+                      <div class="range-scale">
+                        <div class="range-bar" style="width:226px;">
+                          <button class="range-toggle toggle-min">
+                            <span class="visually-hidden">Изменить минимальную цену.</span>
+                          </button>
+                          <button class="range-toggle toggle-max">
+                            <span class="visually-hidden">Изменить максимальную цену.</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
                 </fieldset>
-                <div class="buttons">
-                  <button class="button button-accept" type="submit">Применить</button>
+                <div class="catalog-filter-buttons">
+                  <button class="button filter-button-accept button-accept" type="submit">Применить</button>
                   <button class="button button-reset" type="reset">Сбросить</button>
                 </div>
               </form>
@@ -122,15 +145,15 @@
             <option value="popular">Сначала популярные</option>
           </select>
           <a class="card-grid-toggle" href="#">
-            <svg width="48" height="48" aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M20 17h-4v6h4v-6ZM32 17h-4v6h4v-6ZM26 17h-4v6h4v-6ZM20 25h-4v6h4v-6ZM32 25h-4v6h4v-6ZM26 25h-4v6h4v-6Z"/></g><rect x="1" y="1" width="46" height="46" rx="3" stroke="#E5E5E5" stroke-width="2"/><defs><clipPath id="a"><path fill="#fff" d="M16 17h16v14H16z"/></clipPath></defs></svg>
+            <svg class="card-grid-toggle-icon" width="48" height="48" aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M20 17h-4v6h4v-6ZM32 17h-4v6h4v-6ZM26 17h-4v6h4v-6ZM20 25h-4v6h4v-6ZM32 25h-4v6h4v-6ZM26 25h-4v6h4v-6Z"/></g><rect x="1" y="1" width="46" height="46" rx="3" stroke="#E5E5E5" stroke-width="2"/><defs><clipPath id="a"><path fill="#fff" d="M16 17h16v14H16z"/></clipPath></defs></svg>
             <span class="visually-hidden">Показать карточки</span>
           </a>
           <a class="card-grid-toggle" href="#">
-            <svg width="48" height="48" aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M32 29H16v2h16v-2ZM30 19v6H18v-6h12Zm2-2H16v10h16V17Z"/></g><rect x="1" y="1" width="46" height="46" rx="3" stroke="#E5E5E5" stroke-width="2"/><defs><clipPath id="a"><path fill="#fff" d="M16 17h16v14H16z"/></clipPath></defs></svg>
+            <svg class="card-grid-toggle-icon" width="48" height="48" aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M32 29H16v2h16v-2ZM30 19v6H18v-6h12Zm2-2H16v10h16V17Z"/></g><rect x="1" y="1" width="46" height="46" rx="3" stroke="#E5E5E5" stroke-width="2"/><defs><clipPath id="a"><path fill="#fff" d="M16 17h16v14H16z"/></clipPath></defs></svg>
             <span class="visually-hidden">Показать полностью</span>
           </a>
           <a class="card-grid-toggle" href="#">
-            <svg width="48" height="48" aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M18 17h-2v2h2v-2ZM32 17H20v2h12v-2ZM18 21h-2v2h2v-2ZM32 21H20v2h12v-2ZM18 25h-2v2h2v-2ZM32 25H20v2h12v-2ZM18 29h-2v2h2v-2ZM32 29H20v2h12v-2Z"/></g><rect x="1" y="1" width="46" height="46" rx="3" stroke="#E5E5E5" stroke-width="2"/><defs><clipPath id="a"><path fill="#fff" d="M16 17h16v14H16z"/></clipPath></defs></svg>
+            <svg class="card-grid-toggle-icon" width="48" height="48" aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M18 17h-2v2h2v-2ZM32 17H20v2h12v-2ZM18 21h-2v2h2v-2ZM32 21H20v2h12v-2ZM18 25h-2v2h2v-2ZM32 25H20v2h12v-2ZM18 29h-2v2h2v-2ZM32 29H20v2h12v-2Z"/></g><rect x="1" y="1" width="46" height="46" rx="3" stroke="#E5E5E5" stroke-width="2"/><defs><clipPath id="a"><path fill="#fff" d="M16 17h16v14H16z"/></clipPath></defs></svg>
             <span class="visually-hidden">Показать список</span>
           </a>
         </section>
@@ -145,7 +168,7 @@
               <p class="product-card-price">От 4000 ₽</p>
               <a class="button button-details" href="#">Подробнее</a>
               <button class="button button-accept" type="button">В избранное</button>
-              <div class="product-card-stars">
+              <div class="product-card-stars amara-stars">
                 <span class="visually-hidden">4 звезд</span>
               </div>
               <span class="product-card-rating">Рейтинг: 8,5</span>
@@ -161,7 +184,7 @@
               <p class="product-card-price">От 5000 ₽</p>
               <a class="button button-details" href="#">Подробнее</a>
               <button class="button button-current" type="button">В избранном</button>
-              <div class="product-card-stars">
+              <div class="product-card-stars villas-stars">
                 <span class="visually-hidden">4 звезд</span>
               </div>
               <span class="product-card-rating">Рейтинг: 9,2</span>
@@ -177,7 +200,7 @@
               <p class="product-card-price">От 2500 ₽</p>
               <a class="button button-details" href="#">Подробнее</a>
               <button class="button button-accept" type="button">В избранное</button>
-              <div class="product-card-stars">
+              <div class="product-card-stars desert-stars">
                 <span class="visually-hidden">3 звезд</span>
               </div>
               <span class="product-card-rating">Рейтинг: 6,9</span>
@@ -193,7 +216,7 @@
               <p class="product-card-price">От 1500 ₽</p>
               <a class="button button-details" href="#">Подробнее</a>
               <button class="button button-accept" type="button">В избранное</button>
-              <div class="product-card-stars">
+              <div class="product-card-stars greentree-stars">
                 <span class="visually-hidden">2 звезд</span>
               </div>
               <span class="product-card-rating">Рейтинг: 5,0</span>
